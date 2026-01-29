@@ -1,112 +1,114 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UKK Bagoss - Profile</title>
+    <title>UKK Bagoss - Portfolio</title>
     <style>
+        /* Dasar tampilan */
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            background-color: #f0f2f5;
+            background-color: #f4f7f9;
         }
 
-        /* Lingkaran Foto Profil */
-        .profile-circle {
-            width: 120px;
-            height: 120px;
+        /* 1. Lingkaran Foto Profil */
+        .profile-container {
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            background-color: #ddd;
-            border: 4px solid #4285F4;
+            border: 5px solid #4285F4; /* Bingkai biru */
+            overflow: hidden;
+            background-color: #e0e0e0;
             margin-bottom: 15px;
-            overflow: hidden; /* Agar foto tetap bulat */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
         }
 
-        .profile-circle img {
+        .profile-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Agar foto tidak gepeng */
+            object-fit: cover;
         }
 
+        /* Judul */
         h1 {
-            color: #2c3e50;
-            margin: 0 0 30px 0;
-            font-size: 24px;
+            color: #333;
+            margin-bottom: 30px;
         }
 
         h1 span {
             color: #4285F4;
         }
 
-        /* Kotak File */
+        /* 2. Kotak File Utama */
         .kotak-file {
             background-color: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            padding: 35px 25px;
+            border-radius: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
             text-align: center;
             text-decoration: none;
             color: #333;
-            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 260px;
             border: 2px solid #eee;
-            width: 250px;
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
             user-select: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        /* Efek Hover (Kursor di atasnya) */
+        /* Efek Hover (Saat kursor di atasnya) */
         .kotak-file:hover {
-            transform: translateY(-8px);
+            transform: translateY(-10px);
             border-color: #4285F4;
-            box-shadow: 0 15px 30px rgba(66, 133, 244, 0.15);
+            box-shadow: 0 15px 30px rgba(66, 133, 244, 0.2);
         }
 
-        /* Efek Active (Saat diklik) */
+        /* 3. EFEK KLIK (ACTIVE) */
         .kotak-file:active {
-            transform: scale(0.92);
-            background-color: #e8f0fe;
+            transform: scale(0.90); /* Mengecil saat ditekan */
+            background-color: #f0f7ff; /* Berubah warna tipis */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .icon {
-            font-size: 40px;
+            font-size: 50px;
             margin-bottom: 10px;
-            display: block;
         }
 
         .nama-file {
             font-weight: bold;
-            font-size: 18px;
-            display: block;
+            font-size: 20px;
+            margin-bottom: 5px;
         }
 
         .keterangan {
-            font-size: 12px;
-            color: #888;
+            font-size: 13px;
+            color: #777;
         }
     </style>
 </head>
 <body>
 
-    <div class="profile-circle">
+    <div class="profile-container">
         <img src="popor.png" alt="Foto Profil">
     </div>
 
     <h1>UKK <span>Bagoss</span></h1>
 
     <a href="https://drive.google.com/drive/folders/1eI_vfEQwFAJYbcRTQ2qa7S0QvkaihWl7" target="_blank" class="kotak-file">
-        <span class="icon">📁</span>
+        <div class="icon">📁</div>
         <span class="nama-file">FILE FOTO UKK</span>
-        <span class="keterangan">Klik untuk buka di Google Drive</span>
+        <span class="keterangan">Klik untuk buka di Drive</span>
     </a>
 
 </body>
 </html>
+ 
